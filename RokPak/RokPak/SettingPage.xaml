@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="RokPak.SettingPage">
+    <TableView Intent="Data" 
+               HasUnevenRows="true" >
+        <TableRoot>
+            <TableSection Title="">
+                <ViewCell>
+                    <Grid BackgroundColor="White" Margin="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="25"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="20"/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Source="SOSRed" />
+                        <StackLayout Grid.Column="1">
+                            <Label Grid.Row="0"
+                          Text="Tim Stivak Sr."
+                          Margin="8"
+                          FontAttributes="Bold"
+                          FontSize="Medium" />
+                            <Label Grid.Row="1" Text="Lorem lpsum is simply dummy text"
+                          Margin="8,2,8,4"
+                          FontSize="Small" />
+                        </StackLayout>
+                        <Image Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" Source="Arrow" Margin="8"/>
+                    </Grid>
+                </ViewCell>
+            </TableSection>
+            <TableSection Title="">
+                <ViewCell>
+                    <Grid BackgroundColor="White">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="35"/>
+                            <ColumnDefinition Width="0.5*"/>
+                            <ColumnDefinition Width="0.5*"/>
+                            <ColumnDefinition Width="25"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="35"/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Column="0" Source="BluetoothBlue" Margin="8"/>
+                        <Label Grid.Column="1"
+                          Text="Bluetooth"
+                          Margin="8"
+                          FontAttributes="Bold"
+                          FontSize="Medium" />
+                        <Label Grid.Column="2"
+                               HorizontalTextAlignment="End"
+                          Text="Connect Device"
+                          Margin="8"
+                          FontAttributes="Bold"
+                          TextColor="Gray"
+                          FontSize="Medium" />
+                        <Image Grid.Column="3" Source="Arrow" Margin="8">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Tapped="OnBluetoothTapped"
+                                     NumberOfTapsRequired="1" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Grid>
+                </ViewCell>
+            </TableSection>
+            <TableSection Title="MANAGE ACCOUNT" TextColor="Gray" >
+                <ViewCell>
+                    <Grid BackgroundColor="White">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="35"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="25"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="35"/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Column="0" Source="SeeCurrentPlan" Margin="8"/>
+                        <Label Grid.Column="1"
+                          Text="See current plan"
+                          Margin="8"
+                          FontAttributes="Bold"
+                          FontSize="Medium" />
+                        <Image Grid.Column="2" Source="Arrow" Margin="8"/>
+                    </Grid>
+                </ViewCell>
+                <ViewCell>
+                    <Grid BackgroundColor="White">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="35"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="25"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="35"/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Column="0" Source="UpgradPlan" Margin="8"/>
+                        <Label Grid.Column="1"
+                          Text="Upgrade Plan"
+                          Margin="8"
+                          FontAttributes="Bold"
+                          FontSize="Medium" />
+                        <Image Grid.Column="2" Source="Arrow" Margin="8" />
+                    </Grid>
+                </ViewCell>
+                <ViewCell>
+                    <Grid BackgroundColor="White">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="35"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="25"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="35"/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Column="0" Source="UpdateSOS" Margin="8"/>
+                        <Label Grid.Column="1"
+                          Text="Update SOS information"
+                          Margin="8"
+                          FontAttributes="Bold"
+                          FontSize="Medium" />
+                        <Image Grid.Column="2" Source="Arrow" Margin="8" />
+                    </Grid>
+                </ViewCell>
+                <ViewCell>
+                    <Grid BackgroundColor="White">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="35"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="25"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="35"/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Column="0" Source="UpdateCreditCard" Margin="8"/>
+                        <Label Grid.Column="1"
+                          Text="Update Credit Card"
+                          Margin="8"
+                          FontAttributes="Bold"
+                          FontSize="Medium" />
+                        <Image Grid.Column="2" Source="Arrow" Margin="8" />
+                    </Grid>
+                </ViewCell>
+            </TableSection>
+            <TableSection Title="DEVICE" TextColor="Gray" >
+                <ViewCell>
+                    <Grid BackgroundColor="White">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="35"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="25"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="35"/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Column="0" Source="General" Margin="8"/>
+                        <Label Grid.Column="1"
+                          Text="General"
+                          Margin="8"
+                          FontAttributes="Bold"
+                          FontSize="Medium" />
+                        <Image Grid.Column="2" Source="Arrow" Margin="8"/>
+                    </Grid>
+                </ViewCell>
+             </TableSection>
+            <TableSection Title="MAPS" TextColor="Gray" >
+                <ViewCell>
+                    <Grid BackgroundColor="White">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="35"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="25"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="35"/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Column="0" Source="SavedMaps" Margin="8"/>
+                        <Label Grid.Column="1"
+                          Text="Saved Maps"
+                          Margin="8"
+                          FontAttributes="Bold"
+                          FontSize="Medium" />
+                        <Image Grid.Column="2" Source="Arrow" Margin="8"/>
+                    </Grid>
+                </ViewCell>
+            </TableSection>
+            <TableSection Title="">
+                <ViewCell>
+                    <Grid BackgroundColor="White">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="35"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="25"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="35"/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Column="0" Source="ContactUs" Margin="8"/>
+                        <Label Grid.Column="1"
+                          Text="Contact Us"
+                          Margin="8"
+                          FontAttributes="Bold"
+                          FontSize="Medium" />
+                        <Image Grid.Column="2" Source="Arrow" Margin="8"/>
+                    </Grid>
+                </ViewCell>
+                <ViewCell>
+                    <Grid BackgroundColor="White">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="35"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="25"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="35"/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Column="0" Source="FAQ" Margin="8"/>
+                        <Label Grid.Column="1"
+                          Text="FAQ"
+                          Margin="8"
+                          FontAttributes="Bold"
+                          FontSize="Medium" />
+                        <Image Grid.Column="2" Source="Arrow" Margin="8"/>
+                    </Grid>
+                </ViewCell>
+                <ViewCell>
+                    <Grid BackgroundColor="White">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="35"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="25"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="35"/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Column="0" Source="TermsofUse" Margin="8"/>
+                        <Label Grid.Column="1"
+                          Text="Terms of Use"
+                          Margin="8"
+                          FontAttributes="Bold"
+                          FontSize="Medium" />
+                        <Image Grid.Column="2" Source="Arrow" Margin="8"/>
+                    </Grid>
+                </ViewCell>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>

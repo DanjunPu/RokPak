@@ -1,0 +1,32 @@
+{
+  "images": [
+    {
+      "appearances": [],
+      "scale": "1x",
+      "idiom": "universal",
+      "filename": "SeeCurrentPlanIcon1.png"
+    },
+    {
+      "appearances": [],
+      "scale": "2x",
+      "idiom": "universal",
+      "filename": "SeeCurrentPlanIcon2.png"
+    },
+    {
+      "appearances": [],
+      "scale": "3x",
+      "idiom": "universal",
+      "filename": "SeeCurrentPlanIcon3.png"
+    },
+    {
+      "appearances": [],
+      "idiom": "universal",
+      "filename": "SeeCurrentPlanIcon.pdf"
+    }
+  ],
+  "properties": {},
+  "info": {
+    "version": 1,
+    "author": ""
+  }
+}

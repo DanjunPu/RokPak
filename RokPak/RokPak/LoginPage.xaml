@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="RokPak.LoginPage">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="0.5*" />
+        </Grid.RowDefinitions>
+
+        <Image Source="LoginPhoto.PNG"
+               Margin="0,0,0,50"
+               Grid.Row="0"
+               Grid.Column="0"/>
+
+        <Entry x:Name="usernameEntry" 
+               Margin="30,5"
+               Grid.Row="1"
+               Grid.Column="0"
+               Placeholder="E-mail address" />
+
+        <Entry x:Name="passwordEntry"
+               Margin="30,5"
+               Grid.Row="2"
+               Grid.Column="0"
+               IsPassword="true"
+               Placeholder="Password" />
+        
+        <Button Text="LOGIN"
+                Margin="30,5"
+                BackgroundColor="Orange"
+                CornerRadius="30"
+                TextColor="White"
+                FontSize="Small"
+                Grid.Row="3"
+                Grid.Column="0"
+                Clicked="OnLoginButtonClicked"/>
+
+        <Label HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               Grid.Row="4"
+               Grid.Column="0">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Forgot Password?"
+                  TextColor="Gray">
+                        <Span.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ClickCommand}"
+                                                  CommandParameter="https://xamarin.com"/>
+                        </Span.GestureRecognizers>
+                    </Span>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <Label HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               Grid.Row="6"
+               Grid.Column="0">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Don't hava an account? " />
+                    <Span Text="Sign Up"
+                  TextColor="Orange">
+                        <Span.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnSignUpButtonClicked"/>
+                        </Span.GestureRecognizers>
+                    </Span>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+    </Grid>
+</ContentPage>

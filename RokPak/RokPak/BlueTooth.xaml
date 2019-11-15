@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="RokPak.BlueTooth"
+             BackgroundColor="LightGray">
+    <Grid Margin="0,100">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2.5*" />
+            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="0.5*" />
+        </Grid.RowDefinitions>
+
+        <Image Source="BluetoothPower"
+               Margin="40,0,5,40"
+               Grid.Row="0"
+               Grid.Column="0"/>
+
+        <Image Source="BluetoothBluetooth"
+               Margin="5,0,40,40"
+               Grid.Row="0"
+               Grid.Column="1"/>
+        
+
+        <Label HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               Grid.Row="1"
+               Grid.Column="0"
+               Grid.ColumnSpan="2"
+               Text="LET'S GET STARTED"
+               TextColor="Black"
+               FontAttributes="Bold"
+               FontSize="Large">
+        </Label>
+
+        <Label HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               Grid.Row="2"
+               Grid.Column="0"
+               Grid.ColumnSpan="2"
+               TextColor="Gray"
+               FontSize="Medium"
+               Margin="30,20,30,70"
+               Text="Hold the power button for 3 seconds&#x0a;&#x0a;            to turn on your device.&#x0a;&#x0a;Make sure your phone's bluetooth is on.">
+        </Label>
+
+        
+        <Button Text="Connect device"
+                Margin="70,0"
+                BackgroundColor="blue"
+                CornerRadius="25"
+                TextColor="White"
+                FontSize="Medium"
+                FontAttributes="Bold"
+                Grid.Row="3"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Clicked="OnConnectDeviceButtonClicked"/>
+
+        <Label HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               Grid.Row="4"
+               Grid.Column="0"
+               Grid.ColumnSpan="2">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="I DON'T HAVE A DEVICE"
+                  TextColor="Gray">
+                        <Span.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnClickCommand" />
+                        </Span.GestureRecognizers>
+                    </Span>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </Grid>
+</ContentPage>

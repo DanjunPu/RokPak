@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="RokPak.BluetoothCancel">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Connect Device" />
+    </ContentPage.ToolbarItems>
+    <Grid Margin="0,100"
+          >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="2.5*" />
+        </Grid.RowDefinitions>
+
+        <Image Source="BluetoothPower"
+               Margin="40,50,40,20"
+               Grid.Row="0"/>
+
+        <Label HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               Grid.Row="1"
+               Text="CONNECTING..."
+               TextColor="Black"
+               FontAttributes="Bold"
+               FontSize="Large">
+        </Label>
+
+        <Label HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               Grid.Row="2"
+               TextColor="Gray"
+               FontSize="Medium"
+               Text="Lorem lpsum is simply dummy text of&#x0a;     the printing and typesetting&#x0a;industry. Lorem lpsum has been">
+        </Label>
+
+        <Button Text="Cancel"
+                Margin="70,110,70,50"
+                BackgroundColor="blue"
+                CornerRadius="25"
+                TextColor="White"
+                FontSize="Medium"
+                FontAttributes="Bold"
+                Grid.Row="3"/>
+
+    </Grid>
+</ContentPage>
